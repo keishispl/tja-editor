@@ -358,7 +358,7 @@
                               i.width = l, i.height = c, document.body.appendChild(i);
                               const f = i.getContext("2d");
                               try {
-                                   g(f, 0, 0, l, c, "#cccccc");
+                                   g(f, 0, 0, l, c, "#323232");
                                    for (let e = 0;
                                         e < n.length;
                                         e++) {
@@ -366,10 +366,10 @@
                                         t.measures;
                                         t.totalBeat = a;
                                         const o = 24 + 48 * a + 24, s = v(e);
-                                        g(f, 0, s + 18, o, 32, "#000"), g(f, 0, s + 18 + 2, o, 28, "#fff"), g(f, 0, s + 18 + 4, o, 24, "#999")
-                                   } b(f, 8, 8, e.headers.title, "bold 28px sans-serif", "#000", "top", "left");
-                                   const t = [5, 7, 8, 10, 10];
-                                   b(f, 8, 40, ["Easy", "Normal", "Hard", "Oni", "Edit"][a.course] + " " + "★".repeat(a.headers.level) + "☆".repeat(Math.max(t[a.course] - a.headers.level, 0)), "bold 20px sans-serif", "#000", "top", "left");
+                                        g(f, 0, s + 18, o, 32, "#fff"), g(f, 0, s + 18 + 2, o, 28, "#fff"), g(f, 0, s + 18 + 4, o, 24, "#323232")
+                                   } b(f, 8, 8, e.headers.title, "bold 28px sans-serif", "#fff", "top", "left");
+                                   const t = [10, 10, 10, 10, 10];
+                                   b(f, 8, 40, ["Easy", "Normal", "Hard", "Oni", "Edit"][a.course] + " " + "★".repeat(a.headers.level) + "☆".repeat(Math.max(t[a.course] - a.headers.level, 0)), "bold 20px sans-serif", "#fff", "top", "left");
                                    let o = !1, s = 1;
                                    for (let e = 0;
                                         e < n.length;
@@ -385,7 +385,7 @@
                                                   t < r.events.length;
                                                   t++) {
                                                        const s = r.events[t], c = a + l / (r.data.length || 1) * s.position;
-                                                  "gogoStart" !== s.name || o ? "gogoEnd" === s.name && o && (B(f, n, o[0], o[1], e, c, "#fbb", "gogo"), o = !1) : o = [e, c]
+                                                  "gogoStart" !== s.name || o ? "gogoEnd" === s.name && o && (B(f, n, o[0], o[1], e, c, "#f90", "gogo"), o = !1) : o = [e, c]
                                              } a += l
                                         }
                                    } for (let e = 0;
@@ -407,8 +407,8 @@
                                                   e < r.events.length;
                                                   e++) {
                                                        const t = r.events[e], n = l / (r.data.length || 1) * t.position, s = y(a + n);
-                                                  "scroll" === t.name ? (u(f, s, o, s, o + 50, 2, "#444"), m(f, s + 2, o + 18 - 13, "HS " + t.value.toString(), "#f00", "bottom", "left")) : "bpm" === t.name && (u(f, s, o, s, o + 50, 2, "#444"), m(f, s + 2, o + 18 - 7, "BPM " + t.value.toString(), "#00f", "bottom", "left"))
-                                             } if (u(f, n, o, n, o + 50, 2, "#fff"), m(f, n + 2, o + 18 - 1, s.toString(), "#000", "bottom", "left"), s += 1, a += l, e + 1 === t.length) {
+                                                  "scroll" === t.name ? (u(f, s, o, s, o + 50, 2, "#fff"), m(f, s + 2, o + 18 - 13, "HS " + t.value.toString(), "#fff", "bottom", "left")) : "bpm" === t.name && (u(f, s, o, s, o + 50, 2, "#fff"), m(f, s + 2, o + 18 - 7, "BPM " + t.value.toString(), "#fff", "bottom", "left"))
+                                             } if (u(f, n, o, n, o + 50, 2, "#fff"), m(f, n + 2, o + 18 - 1, s.toString(), "#fff", "bottom", "left"), s += 1, a += l, e + 1 === t.length) {
                                                   const e = y(a);
                                                   u(f, e, o, e, o + 50, 2, "#fff")
                                              }
