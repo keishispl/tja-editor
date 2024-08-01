@@ -207,12 +207,12 @@ export default function (chart, courseId) {
 
             const y = GET_ROW_Y(ridx);
 
-            drawRect(ctx, 0, y + ROW_HEIGHT_INFO, rowWidth, ROW_HEIGHT_NOTE, '#000');
+            drawRect(ctx, 0, y + ROW_HEIGHT_INFO, rowWidth, ROW_HEIGHT_NOTE, '#fff');
             drawRect(ctx, 0, y + ROW_HEIGHT_INFO + 2, rowWidth, ROW_HEIGHT_NOTE - 4, '#fff');
-            drawRect(ctx, 0, y + ROW_HEIGHT_INFO + 4, rowWidth, ROW_HEIGHT_NOTE - 8, '#999');
+            drawRect(ctx, 0, y + ROW_HEIGHT_INFO + 4, rowWidth, ROW_HEIGHT_NOTE - 8, CHART_BG);
         }
 
-        drawText(ctx, 8, 8, chart.headers.title, 'bold 28px sans-serif', '#000', 'top', 'left');
+        drawText(ctx, 8, 8, chart.headers.title, 'bold 28px sans-serif', '#fff', 'top', 'left');
 
         const difficulty = ['Easy', 'Normal', 'Hard', 'Oni', 'Edit'];
         const levelMax = [10, 10, 10, 10, 10];
@@ -222,7 +222,7 @@ export default function (chart, courseId) {
             '☆'.repeat(Math.max(levelMax[course.course] - course.headers.level, 0))
         );
 
-        drawText(ctx, 8, 40, difficultyText, 'bold 20px sans-serif', '#ff0000', 'top', 'left');
+        drawText(ctx, 8, 40, difficultyText, 'bold 20px sans-serif', '#fff', 'top', 'left');
 
         //============================================================================
         // 3. Go-go time, measure grid, events
@@ -249,7 +249,7 @@ export default function (chart, courseId) {
                         gogoStart = [ridx, eBeat];
                     }
                     else if (event.name === 'gogoEnd' && gogoStart) {
-                        drawLong(ctx, rows, gogoStart[0], gogoStart[1], ridx, eBeat, '#fbb', 'gogo');
+                        drawLong(ctx, rows, gogoStart[0], gogoStart[1], ridx, eBeat, '#f90', 'gogo');
                         gogoStart = false;
                     }
                 }
@@ -287,18 +287,18 @@ export default function (chart, courseId) {
                     const ex = GET_BEAT_X(beat + eBeat);
 
                     if (event.name === 'scroll') {
-                        drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#444');
-                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 13, 'HS ' + event.value.toString(), '#f00', 'bottom', 'left');
+                        drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#fff');
+                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 13, 'HS ' + event.value.toString(), '#fff', 'bottom', 'left');
                     }
                     else if (event.name === 'bpm') {
-                        drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#444');
-                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 7, 'BPM ' + event.value.toString(), '#00f', 'bottom', 'left');
+                        drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#fff');
+                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 7, 'BPM ' + event.value.toString(), '#fff', 'bottom', 'left');
                     }
                 }
 
                 // Measure lines, number
                 drawLine(ctx, mx, y, mx, y + ROW_HEIGHT, 2, '#fff');
-                drawPixelText(ctx, mx + 2, y + ROW_HEIGHT_INFO - 1, measureNumber.toString(), '#000', 'bottom', 'left');
+                drawPixelText(ctx, mx + 2, y + ROW_HEIGHT_INFO - 1, measureNumber.toString(), '#fff', 'bottom', 'left');
                 measureNumber += 1;
 
                 beat += mBeat;
