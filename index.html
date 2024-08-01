@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="utf-8">
+     <title>TJA Tools (Dark Mode)</title>
+     <link href="dist/css/app.css?hash=edea76" rel="stylesheet">
+</head>
+
+<body>
+     <style>
+          .area-controls {
+               .button {
+                    padding: 2px 4px;
+                    background: rgb(50, 50, 50);
+                    border: 1px solid white;
+                    font-size: 14px;
+                    color: white;
+                    cursor: pointer;
+
+                    &:hover {
+                         background: rgb(75, 75, 75);
+                    }
+
+                    &.is-active {
+                         font-weight: bold;
+                         background: rgb(75, 75, 75);
+                    }
+               }
+          }
+
+          .pane-left {
+               flex: 5;
+          }
+
+          .area-editor {
+               flex: 0.95;
+
+               .controls {
+                    margin-bottom: 8px;
+                    font-size: 12px;
+               }
+
+               .input {
+                    padding: 8px;
+                    width: 100%;
+                    height: 100%;
+                    font-family: monospace;
+                    resize: none;
+               }
+          }
+          .area-errors {
+               flex: 0.1;
+          }
+     </style>
+     <section class="pane-left" style="background-color: rgb(50, 50, 50);">
+          <div class="area is-titled area-editor">
+               <h2 style="font-weight: bold; font-size: medium; color: white; padding-bottom: 5px;">Editor <a style="font-weight: normal; font-size: small; padding-left: 5px;">(Drag and Drop .tja File)</a></h2>
+               <div class="controls">
+                    <div style="float:left">
+                         <label><input id="editor-live" type="checkbox" checked="checked"><a
+                                   style="color: white; ">Live-Editing</a></label>
+                    </div>
+                    <div style="float:right">
+                         <button class="editor-process"
+                              style="color: white; background-color: rgb(50, 50, 50);">Process</button>
+                    </div>
+               </div>
+               <div class="content"><textarea class="input"
+                         style="background-color: rgb(50, 50, 50); border: 1px solid white; color: white;"></textarea>
+               </div>
+          </div>
+          <div class="area is-titled area-errors">
+               <h2 style="font-weight: bold; font-size: medium; color: white; padding-bottom: 5px;">Errors</h2>
+               <div class="content">
+                    <div class="errors" style="background-color: rgb(50, 50, 50); color: white; font-size: small;">
+                    </div>
+               </div>
+          </div>
+     </section>
+     <section class="pane-right" style="background-color: rgb(50, 50, 50);">
+          <div class="area area-controls">
+               <div class="controls-diff" style="float:left">
+                    <span class="button btn-diff-0" data-value="0">Easy</span>
+                    <span class="button btn-diff-1" data-value="1">Normal</span>
+                    <span class="button btn-diff-2" data-value="2">Hard</span>
+                    <span class="button btn-diff-3" data-value="3">Oni</span>
+                    <span class="button btn-diff-4" data-value="4">Edit</span>
+               </div>
+               <div class="controls-page" style="float:right"><span class="button btn-page-preview"
+                         data-value="preview">Preview</span> <span class="button btn-page-statistics"
+                         data-value="statistics">Statistics</span></div>
+          </div>
+          <div id="area-pages" class="area area-pages">
+               <p style="color: white;" class="difficulty"></p>
+               <div class="page page-preview"></div>
+               <div class="page page-statistics">
+                    <h3 style="color: white;">Statistics</h3>
+                    <h4 style="color: white;">Max Combo</h4>
+                    <p><code class="stat-total-combo" style="color: white; background-color: rgb(50, 50, 50);"></code>
+                    </p>
+                    <h4 style="color: white;">Max Score</h4>
+                    <p style="color: white;"><code class="stat-max-score"
+                              style="color: white; background-color: rgb(50, 50, 50);"></code> Points + Drumroll</p>
+                    <h4 style="color: white;">Don Katsu</h4>
+                    <p style="color: white;"><span class="is-color-don"><code class="stat-don-small"
+                                   style="background-color: rgb(50, 50, 50);"></code> Don + <code class="stat-don-big"
+                                   style="background-color: rgb(50, 50, 50);"></code> DON </span>/ <span
+                              class="is-color-kat"><code class="stat-kat-small"
+                                   style="background-color: rgb(50, 50, 50);"></code> Ka + <code class="stat-kat-big"
+                                   style="background-color: rgb(50, 50, 50);"></code> KA </span>=
+                         <code class="is-color-don stat-don" style="background-color: rgb(50, 50, 50);"></code> / <code
+                              class="is-color-kat stat-kat" style="background-color: rgb(50, 50, 50);"></code>
+                         (<code class="is-color-don stat-don-ratio" style="background-color: rgb(50, 50, 50);"></code> /
+                         <code class="is-color-kat stat-kat-ratio" style="background-color: rgb(50, 50, 50);"></code>)
+                    </p>
+                    <h4 style="color: white;">Average Density</h4>
+                    <p style="color: white;"><code class="stat-density"
+                              style="background-color: rgb(50, 50, 50);"></code> hit/s (in <code class="stat-length"
+                              style="background-color: rgb(50, 50, 50);"></code>s)</p>
+                    <h4 style="color: white;">Drumroll</h4>
+                    <p style="color: white;"><code class="stat-renda" style="background-color: rgb(50, 50, 50);"></code>
+                         = <code class="stat-renda-total" style="background-color: rgb(50, 50, 50);"></code></p>
+                    <h4 style="color: white;">Balloon</h4>
+                    <p style="color: white;"><code class="stat-balloon"
+                              style="background-color: rgb(50, 50, 50);"></code></p>
+                    <h3 style="color: white;">Graph</h3><svg class="stat-graph"></svg>
+               </div>
+          </div>
+     </section>
+     <script type="text/javascript" src="dist/js/vendors~app.js?hash=9de5e8"></script>
+     <script type="text/javascript" src="dist/js/app.js?hash=f932db"></script>
+</body>
+
+</html>
