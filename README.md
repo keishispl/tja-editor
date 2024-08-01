@@ -1,22 +1,15 @@
 # TJA工具 / TJA Tools
 
-将`.tja`文件转化为图片。
+将`.tja`文件转化为图片。 A tool to visualize `.tja` chart files.
 
-A tool to visualize `.tja` chart files.
+由[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉從[Snack](https://github.com/Snack-X/tja-tools)。
 
-由[WHMHammer](https://github.com/WHMHammer)的[tja-tools](https://github.com/WHMHammer/tja-tools)分叉。
-
- -> 由[Snack](https://github.com/Snack-X)的[tja-tools](https://github.com/Snack-X/tja-tools)分叉。
-
-
-Forked from [WHMHammer](https://github.com/WHMHammer)'s [tja-tools](https://github.com/WHMHammer/tja-tools) that is forked from [Snack](https://github.com/Snack-X)'s [tja-tools](https://github.com/Snack-X/tja-tools).
+Forked from [WHMHammer](https://github.com/WHMHammer/tja-tools) that is forked from [Snack](https://github.com/Snack-X/tja-tools).
 
 
 ## 运行 / Run
 
-访问[https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
-
-Visit [https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
+访问 Visit [https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
 
 
 # 致谢 / Acknowledgement
