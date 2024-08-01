@@ -1,10 +1,8 @@
 # TJA工具 / TJA Tools
 
-将`.tja`文件转化为图片。 A tool to visualize `.tja` chart files.
+将`.tja`文件转化为图片。 / A tool to visualize `.tja` chart files.
 
-由[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉從[Snack](https://github.com/Snack-X/tja-tools)。
-
-Forked from [WHMHammer](https://github.com/WHMHammer/tja-tools) that is forked from [Snack](https://github.com/Snack-X/tja-tools).
+由[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉從[Snack](https://github.com/Snack-X/tja-tools)。 / Forked from [WHMHammer](https://github.com/WHMHammer/tja-tools) that is forked from [Snack](https://github.com/Snack-X/tja-tools).
 
 
 ## 运行 / Run
@@ -12,9 +10,7 @@ Forked from [WHMHammer](https://github.com/WHMHammer/tja-tools) that is forked f
 [https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
 
 
-要幫忙請看見[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉。
-
-If needing help, please visit [WHMHammer](https://github.com/WHMHammer/tja-tools)'s fork.
+要幫忙請看見[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉。 / If needing help, please visit [WHMHammer](https://github.com/WHMHammer/tja-tools)'s fork.
 
 
 # 致谢 / Acknowledgement
