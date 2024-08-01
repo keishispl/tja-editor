@@ -9,11 +9,16 @@ Forked from [WHMHammer](https://github.com/WHMHammer/tja-tools) that is forked f
 
 ## 运行 / Run
 
-访问 Visit [https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
+[https://keishispl.github.io/tja-tools](https://keishispl.github.io/tja-tools)
+
+
+要幫忙請看見[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉。
+
+If needing help, please visit [WHMHammer](https://github.com/WHMHammer/tja-tools)'s fork.
 
 
 # 致谢 / Acknowledgement
 
 - [Snack](https://github.com/Snack-X)：项目的原作者 / The original author of the project
-- [申しコミ](https://github.com/0auBSQ)：添加了对`A`、`B`、`C`、`F`、`G`音符的支持 / Added support to `A`,`B`,`C`,`F`, and `G`notes
+- [申しコミ](https://github.com/0auBSQ)：添加了对`A`、`B`、`C`、`F`和`G`音符的支持 / Added support to `A`,`B`,`C`,`F` & `G` notes
 - [WHMHammer](https://github.com/WHMHammer)：初分叉 / Where the project was forked from

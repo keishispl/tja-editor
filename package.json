@@ -2,9 +2,8 @@
   "name": "tja-tools",
   "version": "2.4.1",
   "author": {
-    "name": "WHMHammer",
-    "email": "whmhammer@gmail.com",
-    "url": "https://github.com/WHMHammer"
+    "name": "Keishi",
+    "url": "https://github.com/keishispl"
   },
   "contributors": [
     {
@@ -15,6 +14,11 @@
     {
       "name": "申しコミ",
       "url": "https://github.com/0auBSQ"
+    },
+    {
+      "name": "WHMHammer",
+      "email": "whmhammer@gmail.com",
+      "url": "https://github.com/WHMHammer"
     }
   ],
   "main": "index.html",
