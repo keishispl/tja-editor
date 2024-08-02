@@ -12,6 +12,10 @@
 
 要幫忙請看見[WHMHammer](https://github.com/WHMHammer/tja-tools)的分叉。 / If needing help, please visit [WHMHammer](https://github.com/WHMHammer/tja-tools)'s fork.
 
+<img style="height: 500px; width: auto; border-radius 5px;" src="img/preview.png" alt="Preview">
+<br><br>
+<img style="height: 500px; width: auto; border-radius 5px;" src="img/statistics.png" alt="Statistics">
+
 
 # 致谢 / Acknowledgement
 
