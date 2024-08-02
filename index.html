@@ -3,7 +3,16 @@
 
 <head>
      <meta charset="utf-8">
-     <title>TJA Tools (Dark Mode)</title>
+     <title>TJA Editor</title>
+     <meta content="TJA Editor" property="og:title">
+
+     <meta content="Edit .TJA Files with a Preview" property="og:description">
+     <meta content="Edit .TJA Files with a Preview" name="description">
+
+     <meta content="img/icon.png" property="og:image">
+     <link rel="icon" href="img/icon.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="img/icon.png">
+
      <link href="dist/css/app.css?hash=edea76" rel="stylesheet">
 </head>
 
@@ -29,6 +38,24 @@
                }
           }
 
+          .button {
+               padding: 2px 4px;
+               background: rgb(50, 50, 50);
+               border: 1px solid white;
+               font-size: 14px;
+               color: white;
+               cursor: pointer;
+
+               &:hover {
+                    background: rgb(75, 75, 75);
+               }
+
+               &.is-active {
+                    font-weight: bold;
+                    background: rgb(75, 75, 75);
+               }
+          }
+
           .pane-left {
                flex: 5;
           }
@@ -49,13 +76,23 @@
                     resize: none;
                }
           }
+
           .area-errors {
                flex: 0.1;
           }
      </style>
      <section class="pane-left" style="background-color: rgb(50, 50, 50);">
           <div class="area is-titled area-editor">
-               <h2 style="font-weight: bold; font-size: medium; color: white; padding-bottom: 5px;">Editor <a style="font-weight: normal; font-size: small; padding-left: 5px;">(Drag and Drop .tja File)</a></h2>
+               <div>
+                    <div style="float:left">
+                         <h2 style="font-weight: bold; font-size: medium; color: white; padding-bottom: 5px;">Editor <a
+                                   style="font-weight: normal; font-size: small; padding-left: 5px;">(Drag and Drop .tja File)</a>
+                         </h2>
+                    </div>
+                    <div style="float:right">
+                         <a href="https://github.com/keishispl/tja-tools" style="text-decoration: none;"><span class="button">View Source</span></a>
+                    </div>
+               </div>
                <div class="controls">
                     <div style="float:left">
                          <label><input id="editor-live" type="checkbox" checked="checked"><a
@@ -116,13 +153,19 @@
                     </p>
 
                     <h4 style="color: white;">Average Density</h4>
-                    <p style="color: white;"><code class="stat-density" style="background-color: rgb(50, 50, 50);"></code> hit/s (in <code class="stat-length" style="background-color: rgb(50, 50, 50);"></code>s)</p>
-                              
+                    <p style="color: white;"><code class="stat-density"
+                              style="background-color: rgb(50, 50, 50);"></code> hit/s (in <code class="stat-length"
+                              style="background-color: rgb(50, 50, 50);"></code>s)</p>
+
                     <h4 style="color: white;">Drumroll</h4>
-                    <p style="color: white;"><code class="stat-renda" style="background-color: rgb(50, 50, 50); color: yellow;"></code> = <code class="stat-renda-total" style="background-color: rgb(50, 50, 50); color: yellow;"></code></p>
+                    <p style="color: white;"><code class="stat-renda"
+                              style="background-color: rgb(50, 50, 50); color: yellow;"></code> = <code
+                              class="stat-renda-total" style="background-color: rgb(50, 50, 50); color: yellow;"></code>
+                    </p>
 
                     <h4 style="color: white;">Balloon</h4>
-                    <p style="color: orange;"><code class="stat-balloon" style="background-color: rgb(50, 50, 50);"></code></p>
+                    <p style="color: orange;"><code class="stat-balloon"
+                              style="background-color: rgb(50, 50, 50);"></code></p>
 
                     <h3 style="color: white;">Graph</h3><svg class="stat-graph"></svg>
                </div>
