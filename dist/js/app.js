@@ -11,12 +11,12 @@
           for (var e, t = 0;
                t < s.length;
                t++) {
-                    for (var a = s[t], o = !0, l = 1;
-                         l < a.length;
-                         l++) {
-                              var c = a[l];
-                         0 !== n[c] && (o = !1)
-                    } o && (s.splice(t--, 1), e = r(r.s = a[0]))
+               for (var a = s[t], o = !0, l = 1;
+                    l < a.length;
+                    l++) {
+                    var c = a[l];
+                    0 !== n[c] && (o = !1)
+               } o && (s.splice(t--, 1), e = r(r.s = a[0]))
           } return e
      } var o = {}, n = { 0: 0 }, s = [];
      function r(t) {
@@ -117,7 +117,7 @@
                     for (let e = 0;
                          e < o[0].events.length;
                          e++) {
-                              const a = o[0].events[e];
+                         const a = o[0].events[e];
                          if ("bpm" === a.name && 0 === a.position) {
                               t = !0;
                               break
@@ -165,7 +165,7 @@
                     for (let o = a + 1;
                          o < n;
                          o++) {
-                              let a = v(o), n = y(t[o].totalBeat) + 24;
+                         let a = v(o), n = y(t[o].totalBeat) + 24;
                          p ? g(e, 0, a, n, b, r) : (a += 25 - (u ? 3 : 0), g(e, 0, a, n, b, "#000"), g(e, 0, a + 1, n, b - 2, "#fff"), g(e, 0, a + 2, n, b - 4, r))
                     } const f = y(s);
                     p ? g(e, 0, d, f, b, r) : (g(e, 0, d, f, b, "#000"), g(e, 0, d + 1, f, b - 2, "#fff"), g(e, 0, d + 2, f, b - 4, r))
@@ -181,16 +181,16 @@
                     for (let r = 0;
                          r < e.measures.length;
                          r++) {
-                              const l = e.measures[r], c = l.length[0] / l.length[1] * 4;
+                         const l = e.measures[r], c = l.length[0] / l.length[1] * 4;
                          for (let e = 0;
                               e < l.events.length;
                               e++) {
-                                   const a = l.events[e], n = c / (l.data.length || 1) * a.position;
+                              const a = l.events[e], n = c / (l.data.length || 1) * a.position;
                               "bpm" === a.name ? t.push({ type: "bpm", value: a.value, beat: o + n }) : "gogoStart" === a.name ? t.push({ type: "gogoStart", beat: o + n }) : "gogoEnd" === a.name && t.push({ type: "gogoEnd", beat: o + n })
                          } for (let t = 0;
                               t < l.data.length;
                               t++) {
-                                   const r = l.data.charAt(t);
+                              const r = l.data.charAt(t);
                               let i = { type: "", beat: o + c / l.data.length * t };
                               switch (r) {
                                    case "1": i.type = "don";
@@ -216,13 +216,13 @@
                          let a = 120, o = 0, n = 0, s = 0, r = 0, l = [];
                          for (;
                               r < t.length;) {
-                                   let c = e[s], i = t[r];
+                              let c = e[s], i = t[r];
                               for (;
                                    c && c.beat <= i;) {
-                                        if ("bpm" === c.type) {
-                                             let e = c.beat - o;
-                                             o += e, n += 60 / a * e, a = c.value
-                                        } s++, c = e[s]
+                                   if ("bpm" === c.type) {
+                                        let e = c.beat - o;
+                                        o += e, n += 60 / a * e, a = c.value
+                                   } s++, c = e[s]
                               } let f = i - o, d = 60 / a * f;
                               l.push(n + d), o += f, n += d, r++
                          } return l
@@ -236,7 +236,7 @@
                          for (let y = 0;
                               y < e.notes.length;
                               y++) {
-                                   const k = e.notes[y];
+                              const k = e.notes[y];
                               if (p && p.beat <= k.beat) do { "gogoStart" === p.type ? u = 1 : "gogoEnd" === p.type && (u = 0), d += 1, p = e.events[d] } while (p && p.beat <= k.beat);
                               const E = v.indexOf(k.type);
                               if (-1 === E) if ("renda" !== k.type && "rendaBig" !== k.type) if ("balloon" !== k.type) {
@@ -262,11 +262,11 @@
                          for (let r = 0;
                               r < e.notes.length;
                               r++) {
-                                   const l = e.notes[r];
+                              const l = e.notes[r];
                               if (-1 !== s.indexOf(l.type)) {
                                    for (;
                                         (t.length + 1) * n <= l.time;) {
-                                             const e = a.don + a.kat;
+                                        const e = a.don + a.kat;
                                         o < e && (o = e), t.push(a), a = { don: 0, kat: 0 }
                                    } "don" === l.type || "donBig" === l.type ? a.don += 1 : "kat" !== l.type && "katBig" !== l.type || (a.kat += 1)
                               }
@@ -311,7 +311,7 @@
                          for (n = 0;
                               n < t.length;
                               n++) {
-                                   const e = t[n];
+                              const e = t[n];
                               if ("" === e) continue;
                               const r = d(e);
                               if ("header" === r.type && "global" === r.scope) switch (r.name) {
@@ -351,7 +351,7 @@
                               for (let e = 0;
                                    e < a.measures.length;
                                    e++) {
-                                        const t = a.measures[e], l = t.length[0] / t.length[1] * 4;
+                                   const t = a.measures[e], l = t.length[0] / t.length[1] * 4;
                                    (o < r + l || t.properties.ttBreak) && (n.push({ beats: r, measures: s }), s = [], r = 0), s.push(t), r += l
                               } s.length && n.push({ beats: r, measures: s });
                               const l = 24 + 48 * o + 24, c = 64 + 66 * n.length + 8, i = document.createElement("canvas");
@@ -362,52 +362,53 @@
                                    for (let e = 0;
                                         e < n.length;
                                         e++) {
-                                             const t = n[e], a = t.beats;
+                                        const t = n[e], a = t.beats;
                                         t.measures;
                                         t.totalBeat = a;
                                         const o = 24 + 48 * a + 24, s = v(e);
                                         g(f, 0, s + 18, o, 32, "#fff"), g(f, 0, s + 18 + 2, o, 28, "#fff"), g(f, 0, s + 18 + 4, o, 24, "#323232")
-                                   } b(f, 8, 8, e.headers.title, "bold 28px sans-serif", "#fff", "top", "left");
+                                   }
+                                   b(f, 8, 8, e.headers.title, "bold 28px sans-serif", "#fff", "top", "left");
                                    const t = [10, 10, 10, 10, 10];
-                                   b(f, 8, 40, ["Easy", "Normal", "Hard", "Oni", "Edit"][a.course] + " " + "★".repeat(a.headers.level) + "☆".repeat(Math.max(t[a.course] - a.headers.level, 0)), "bold 20px sans-serif", "#fff", "top", "left");
+                                   b(f, 8, 40, ["Easy", "Normal", "Hard", "Oni", "Ura"][a.course] + ' ' + "★".repeat(a.headers.level) + "☆".repeat(Math.max(t[a.course] - a.headers.level, 0)) + ' | ' + e.headers.subtitle.replace("--", ""), "bold 18px sans-serif", "#fff", "top", "left");
                                    let o = !1, s = 1;
                                    for (let e = 0;
                                         e < n.length;
                                         e++) {
-                                             const t = n[e].measures;
+                                        const t = n[e].measures;
                                         let a = 0;
                                         for (let s = 0;
                                              s < t.length;
                                              s++) {
-                                                  const r = t[s], l = r.length[0] / r.length[1] * 4;
+                                             const r = t[s], l = r.length[0] / r.length[1] * 4;
                                              r.rowBeat = a;
                                              for (let t = 0;
                                                   t < r.events.length;
                                                   t++) {
-                                                       const s = r.events[t], c = a + l / (r.data.length || 1) * s.position;
+                                                  const s = r.events[t], c = a + l / (r.data.length || 1) * s.position;
                                                   "gogoStart" !== s.name || o ? "gogoEnd" === s.name && o && (B(f, n, o[0], o[1], e, c, "#f90", "gogo"), o = !1) : o = [e, c]
                                              } a += l
                                         }
                                    } for (let e = 0;
                                         e < n.length;
                                         e++) {
-                                             const t = n[e].measures;
+                                        const t = n[e].measures;
                                         let a = 0;
                                         const o = v(e);
                                         for (let e = 0;
                                              e < t.length;
                                              e++) {
-                                                  const n = y(a), r = t[e], l = r.length[0] / r.length[1] * 4, c = o + 18;
+                                             const n = y(a), r = t[e], l = r.length[0] / r.length[1] * 4, c = o + 18;
                                              for (let e = 1;
                                                   e < 2 * r.length[0];
                                                   e++) {
-                                                       const t = e / r.length[1] * 2, o = y(a + t);
+                                                  const t = e / r.length[1] * 2, o = y(a + t);
                                                   u(f, o, c, o, c + 32, 2, "#fff" + (e % 2 ? "4" : "8"))
                                              } for (let e = 0;
                                                   e < r.events.length;
                                                   e++) {
-                                                       const t = r.events[e], n = l / (r.data.length || 1) * t.position, s = y(a + n);
-                                                  "scroll" === t.name ? (u(f, s, o, s, o + 50, 2, "#fff"), m(f, s + 2, o + 18 - 13, "HS " + t.value.toString(), "#fff", "bottom", "left")) : "bpm" === t.name && (u(f, s, o, s, o + 50, 2, "#fff"), m(f, s + 2, o + 18 - 7, "BPM " + t.value.toString(), "#fff", "bottom", "left"))
+                                                  const t = r.events[e], n = l / (r.data.length || 1) * t.position, s = y(a + n);
+                                                  "scroll" === t.name ? (u(f, s, o, s, o + 50, 2, "#fff"), b(f, s + 2, o + 18 - 13, "HS " + t.value.toString(), "10px sans-serif", "#fff", "bottom", "left")) : "bpm" === t.name && (u(f, s, o, s, o + 50, 2, "#fff"), b(f, s + 2, o + 18 - 7, "BPM " + t.value.toString(), "10px sans-serif", "#fff", "bottom", "left"))
                                              } if (u(f, n, o, n, o + 50, 2, "#fff"), m(f, n + 2, o + 18 - 1, s.toString(), "#fff", "bottom", "left"), s += 1, a += l, e + 1 === t.length) {
                                                   const e = y(a);
                                                   u(f, e, o, e, o + 50, 2, "#fff")
@@ -417,15 +418,15 @@
                                    for (let e = 0;
                                         e < n.length;
                                         e++) {
-                                             const t = n[e].measures;
+                                        const t = n[e].measures;
                                         for (let e = 0;
                                              e < t.length;
                                              e++) {
-                                                  const a = t[e];
+                                             const a = t[e];
                                              for (let e = a.data.length;
                                                   e >= 0;
                                                   e--) {
-                                                       const t = a.data.charAt(e);
+                                                  const t = a.data.charAt(e);
                                                   "7" === t ? r += 1 : "9" !== t || d ? "8" === t && d && (d = !1) : (d = 1, r += 1)
                                              }
                                         }
@@ -434,15 +435,15 @@
                                    for (let e = n.length - 1;
                                         e >= 0;
                                         e--) {
-                                             const t = n[e].measures;
+                                        const t = n[e].measures;
                                         for (let o = t.length - 1;
                                              o >= 0;
                                              o--) {
-                                                  const s = t[o], l = s.length[0] / s.length[1] * 4;
+                                             const s = t[o], l = s.length[0] / s.length[1] * 4;
                                              for (let t = s.data.length;
                                                   t >= 0;
                                                   t--) {
-                                                       const o = s.data.charAt(t), c = s.rowBeat + l / s.data.length * t;
+                                                  const o = s.data.charAt(t), c = s.rowBeat + l / s.data.length * t;
                                                   if ("0" !== o && "9" !== o && h) {
                                                        h[0];
                                                        const e = h[h.length - 1], t = a.headers.balloon[r - 1];

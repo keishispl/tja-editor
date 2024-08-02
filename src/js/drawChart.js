@@ -214,12 +214,13 @@ export default function (chart, courseId) {
 
         drawText(ctx, 8, 8, chart.headers.title, 'bold 28px sans-serif', '#fff', 'top', 'left');
 
-        const difficulty = ['Easy', 'Normal', 'Hard', 'Oni', 'Edit'];
+        const difficulty = ['Easy', 'Normal', 'Hard', 'Oni', 'Ura'];
         const levelMax = [10, 10, 10, 10, 10];
         const difficultyText = (
             difficulty[course.course] + ' ' +
             '★'.repeat(course.headers.level) +
-            '☆'.repeat(Math.max(levelMax[course.course] - course.headers.level, 0))
+            '☆'.repeat(Math.max(levelMax[course.course] - course.headers.level, 0)) +
+            ' | ' + chart.headers.subtitle.replace("--", "")
         );
 
         drawText(ctx, 8, 40, difficultyText, 'bold 20px sans-serif', '#fff', 'top', 'left');
@@ -288,11 +289,11 @@ export default function (chart, courseId) {
 
                     if (event.name === 'scroll') {
                         drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#fff');
-                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 13, 'HS ' + event.value.toString(), '#fff', 'bottom', 'left');
+                        drawText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 13, 'HS ' + event.value.toString(), "10px sans-serif", '#fff', 'bottom', 'left');
                     }
                     else if (event.name === 'bpm') {
                         drawLine(ctx, ex, y, ex, y + ROW_HEIGHT, 2, '#fff');
-                        drawPixelText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 7, 'BPM ' + event.value.toString(), '#fff', 'bottom', 'left');
+                        drawText(ctx, ex + 2, y + ROW_HEIGHT_INFO - 7, 'BPM ' + event.value.toString(), "10px sans-serif", '#fff', 'bottom', 'left');
                     }
                 }
 
