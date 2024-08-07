@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
      <meta charset="utf-8">
      <title>TJA Editor</title>
@@ -15,7 +14,6 @@
 
      <link href="dist/css/app.css?hash=edea76" rel="stylesheet">
 </head>
-
 <body>
      <style>
           .area-controls {
@@ -76,7 +74,7 @@
                     resize: none;
                }
           }
-
+          
           .area-errors {
                flex: 0.1;
           }
@@ -86,11 +84,13 @@
                <div>
                     <div style="float:left">
                          <h2 style="font-weight: bold; font-size: medium; color: white; padding-bottom: 5px;">Editor <a
-                                   style="font-weight: normal; font-size: small; padding-left: 5px;">(Drag and Drop .tja File)</a>
+                                   style="font-weight: normal; font-size: small; padding-left: 5px;">(Drag and Drop .tja
+                                   File)</a>
                          </h2>
                     </div>
                     <div style="float:right">
-                         <a href="https://github.com/keishispl/tja-editor" target="_blank" style="text-decoration: none;"><span class="button">View Source</span></a>
+                         <a href="https://github.com/keishispl/tja-editor" target="_blank"
+                              style="text-decoration: none;"><span class="button">View Source</span></a>
                     </div>
                </div>
                <div class="controls">
@@ -103,7 +103,8 @@
                               style="color: white; background-color: rgb(50, 50, 50);">Process</button>
                     </div>
                </div>
-               <div class="content"><textarea class="input"
+               <div class="content">
+                    <textarea class="input"
                          style="background-color: rgb(50, 50, 50); border: 1px solid white; color: white;"></textarea>
                </div>
           </div>
@@ -124,55 +125,110 @@
                     <span class="button btn-diff-3" data-value="3">Oni</span>
                     <span class="button btn-diff-4" data-value="4">Ura</span>
                </div>
-               <div class="controls-page" style="float:right"><span class="button btn-page-preview"
-                         data-value="preview">Preview</span> <span class="button btn-page-statistics"
-                         data-value="statistics">Statistics</span></div>
+               <div class="controls-page" style="float:right">
+                    <span class="button btn-page-preview" data-value="preview">Preview</span> 
+                    <span class="button btn-page-statistics" data-value="statistics">Statistics</span> 
+                    <span class="button btn-page-help" data-value="help">Help</span></div>
           </div>
           <div id="area-pages" class="area area-pages">
-               <p style="color: white;" class="difficulty"></p>
                <div class="page page-preview"></div>
-               <div class="page page-statistics">
-                    <h3 style="color: white;">Statistics</h3>
-                    <h4 style="color: white;">Max Combo</h4>
-                    <p><code class="stat-total-combo" style="color: white; background-color: rgb(50, 50, 50);"></code>
-                    </p>
-                    <h4 style="color: white;">Max Score</h4>
-                    <p style="color: white;"><code class="stat-max-score"
-                              style="color: white; background-color: rgb(50, 50, 50);"></code> Points + Drumroll</p>
-                    <h4 style="color: white;">Don Katsu</h4>
-                    <p style="color: white;"><span class="is-color-don"><code class="stat-don-small"
-                                   style="background-color: rgb(50, 50, 50);"></code> Don + <code class="stat-don-big"
-                                   style="background-color: rgb(50, 50, 50);"></code> <b>DON</b> </span>/ <span
-                              class="is-color-kat"><code class="stat-kat-small"
-                                   style="background-color: rgb(50, 50, 50);"></code> Ka + <code class="stat-kat-big"
-                                   style="background-color: rgb(50, 50, 50);"></code> <b>KA</b> </span>=
-                         <code class="is-color-don stat-don" style="background-color: rgb(50, 50, 50);"></code> / <code
-                              class="is-color-kat stat-kat" style="background-color: rgb(50, 50, 50);"></code>
-                         (<code class="is-color-don stat-don-ratio" style="background-color: rgb(50, 50, 50);"></code> /
-                         <code class="is-color-kat stat-kat-ratio" style="background-color: rgb(50, 50, 50);"></code>)
-                    </p>
+               <div class="page page-statistics" style="color: white; background-color: rgb(50, 50, 50);">
+                    <h3>Statistics</h3>
 
-                    <h4 style="color: white;">Average Density</h4>
-                    <p style="color: white;"><code class="stat-density"
-                              style="background-color: rgb(50, 50, 50);"></code> hit/s (in <code class="stat-length"
-                              style="background-color: rgb(50, 50, 50);"></code>s)</p>
+                    <h4>Max Combo</h4>
+                    <p><code class="stat-total-combo" style="color: white; background-color: rgb(50, 50, 50);"></code></p>
 
-                    <h4 style="color: white;">Drumroll</h4>
-                    <p style="color: white;"><code class="stat-renda"
-                              style="background-color: rgb(50, 50, 50); color: yellow;"></code> = <code
-                              class="stat-renda-total" style="background-color: rgb(50, 50, 50); color: yellow;"></code>
-                    </p>
+                    <h4>Max Score</h4>
+                    <p><code class="stat-max-score" style="color: white; background-color: rgb(50, 50, 50);"></code> Points + Drumroll</p>
 
-                    <h4 style="color: white;">Balloon</h4>
-                    <p style="color: orange;"><code class="stat-balloon"
-                              style="background-color: rgb(50, 50, 50);"></code></p>
+                    <h4>Don Katsu</h4>
+                    <p><span class="is-color-don"><code class="stat-don-small"></code> Don + <code class="stat-don-big"></code> <b>DON</b> </span>/ <span class="is-color-kat"><code class="stat-kat-small"></code> Ka + <code class="stat-kat-big"></code> <b>KA</b> </span> = <code class="is-color-don stat-don"></code> / <code class="is-color-kat stat-kat"></code> (<code class="is-color-don stat-don-ratio"></code> / <code class="is-color-kat stat-kat-ratio"></code>)</p>
 
-                    <h3 style="color: white;">Graph</h3><svg class="stat-graph"></svg>
+                    <h4>Average Density</h4>
+                    <p><code class="stat-density"></code> hit/s (in <code class="stat-length"></code>s)</p>
+
+                    <h4>Drumroll</h4>
+                    <p><code class="stat-renda" style="color: yellow;"></code> = <code class="stat-renda-total" style="color: yellow;"></code></p>
+
+                    <h4>Balloon</h4>
+                    <p style="color: orange;"><code class="stat-balloon"></code></p>
+
+                    <h3>Graph</h3>
+                    <svg class="stat-graph" style="color: black;"></svg>
+               </div>
+               <div class="page page-help" style="color: white;">
+                    <h3>Help</h3>
+                    <p>This is just a basic tja formatting guide. For a more in-depth one, please visit <a target="_blank" style="color: aqua;" href="https://github.com/269Seahorse/Better-taiko-web/blob/master/TJA-format.mediawiki">here</a>.</p>
+                    <br>
+
+                    <h3>Metadata</h3>
+
+                    <h4>Main</h4>
+                    <p><code>TITLE</code> = Song Title</p>
+                    <p><code>TITLEEN, TITLEJA, etc.</code> = Translated Song Title (For Other Languages)</p>
+                    <p><code>SUBTITLE</code> = Song Description</p>
+                    <p><code>SUBTITLEEN, SUBTITLEJA, etc.</code> = Translated Song Description (For Other Languages)</p>
+                    <br>
+                    <p><code>BPM</code> = Song Beats per Minute</p>
+                    <p><code>WAVE</code> = Sound File</p>
+                    <p><code>OFFSET</code> = Chart Offset in Seconds</p>
+                    <br>
+                    <p><code>DEMOSTART</code> = Offset of Song Preview</p>
+                    <p><code>GENRE</code> = Genre of the Song</p>
+                    <p><code>SCOREMODE</code> = Scoring Method</p>
+                    <br>
+                    <p><code>MAKER</code> = Chart Creator's Name</p>
+                    <p><code>LYRICS</code> = Path to a Timed WEBVTT Lyrics File</p>
+                    <p><code>SONGVOL</code> = Song Volume Percentage</p>
+                    <p><code>SEVOL</code> = Sound Effect Volume Percentage</p>
+                    <p><code>HEADSCROLL</code> = Initial Game Scrolling Speed</p>
+                    <br>
+
+                    <h4>Course</h4>
+                    <p><code>COURSE</code> = Name Difficulty</p>
+                    <p><code>LEVEL</code> = Difficulty Integer</p>
+                    <p><code>BALLOON</code> = Comma Separated Array of Integers for Balloon Notes</p>
+                    <p><code>SCOREINIT</code> = Sets INIT Value for the Scoring Method</p>
+                    <p><code>SCOREDIFF</code> = Sets DIFF Value for the Scoring Method</p>
+                    <br>
+
+                    <h3>Song Notation</h3>
+
+                    <h4>Notes</h4>
+                    <p><code>0</code> = No Note</p>
+                    <p><code>1</code> = <span class="is-color-don">Don</span></p>
+                    <p><code>2</code> = <span class="is-color-kat">Ka</span></p>
+                    <p><code>3</code> = <span class="is-color-don"><b>Big DON</b></span></p>
+                    <p><code>4</code> = <span class="is-color-kat"><b>Big KA</b></span></p>
+                    <br>
+                    <p><code>5</code> = Start of <a style="color: yellow;">Drumroll</a></p>
+                    <p><code>6</code> = Start of <a style="color: yellow;"><b>Big DRUMROLL</b></a></p>
+                    <p><code>7</code> = Start of <a style="color: orange;">Balloon</a></p>
+                    <p><code>8</code> = End of <a style="color: yellow;">Drumroll</a> or <a style="color: orange;">Balloon</a></p>
+                    <p><code>9</code> = Start of <a style="color: orange;"><b>Big BALLOON</b></a></p>
+                    <br>
+                    <p><code>A</code> = <span class="is-color-don">Don</span> (With Hands in Multiplayer)</p>
+                    <p><code>B</code> = <span class="is-color-kat">Ka</span> (With Hands in Multiplayer)</p>
+                    <p><code>F</code> = Hidden Note (Missed does not count towards BAD)</p>
+                    <br>
+                    <p><code>,</code> = Conclude a Measure (If Followed by a Line Break)</p>
+                    <br>
+
+                    <h4>Commands</h4>
+                    <p><code>#START, #END</code> = Start/End of the Song Notation</p>
+                    <p><code>#MEASURE (e.g. 4/4)</code> = Changes Time Signature</p>
+                    <p><code>#BPMCHANGE (e.g. 100)</code> = Changes Song BPM</p>
+                    <p><code>#DELAY (e.g. 0.1)</code> = Offset in Seconds</p>
+                    <p><code>#SCROLL (e.g. 1.5)</code> = Multiplies the Default Scrolling Speed (CANNOT BE 0)</p>
+                    <p><code>#GOGOSTART, #GOGOEND</code> = Start/End of the Go-Go Time Mode</p>
+                    <p><code>#BARLINEON, #BARLINEOFF</code> = Show/Hide the Measure Lines</p>
+                    <br>
+                    <p><code>#LYRIC (e.g. La la la...)</code> = Show Song Lyrics at the Bottom of the Screen (IGNORED IF LYRICS IS DEFINED)</p>
+                    <br>
                </div>
           </div>
      </section>
      <script type="text/javascript" src="dist/js/vendors~app.js?hash=9de5e8"></script>
      <script type="text/javascript" src="dist/js/app.js?hash=f932db"></script>
 </body>
-
 </html>

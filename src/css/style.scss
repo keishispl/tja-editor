@@ -183,7 +183,7 @@ body {
     text-align: center;
 }
 
-.page-statistics {
+.page-statistics, .page-help {
     h3 {
         margin-top: 1rem;
         margin-bottom: 1rem;
@@ -206,7 +206,7 @@ body {
         display: inline-block;
         padding: 2px 4px;
         font-size: 1rem;
-        background: #f7f7f7;
+        background: rgb(50, 50, 50);
         border: 1px solid #eeeeee;
         border-radius: 3px;
     }

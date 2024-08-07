@@ -18,21 +18,47 @@
                     0 !== n[c] && (o = !1)
                } o && (s.splice(t--, 1), e = r(r.s = a[0]))
           } return e
-     } var o = {}, n = { 0: 0 }, s = [];
+     } var o = {}, n = {
+          0: 0
+     }, s = [];
      function r(t) {
           if (o[t]) return o[t].exports;
-          var a = o[t] = { i: t, l: !1, exports: {} };
+          var a = o[t] = {
+               i: t, l: !1, exports: {}
+          };
           return e[t].call(a.exports, a, a.exports, r), a.l = !0, a.exports
-     } r.m = e, r.c = o, r.d = function (e, t, a) { r.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: a }) }, r.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, r.t = function (e, t) {
+     } r.m = e, r.c = o, r.d = function (e, t, a) {
+          r.o(e, t) || Object.defineProperty(e, t, {
+               enumerable: !0, get: a
+          })
+     }, r.r = function (e) {
+          "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+               value: "Module"
+          }), Object.defineProperty(e, "__esModule", {
+               value: !0
+          })
+     }, r.t = function (e, t) {
           if (1 & t && (e = r(e)), 8 & t) return e;
           if (4 & t && "object" == typeof e && e && e.__esModule) return e;
           var a = Object.create(null);
-          if (r.r(a), Object.defineProperty(a, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var o in e) r.d(a, o, function (t) { return e[t] }.bind(null, o));
+          if (r.r(a), Object.defineProperty(a, "default", {
+               enumerable: !0, value: e
+          }), 2 & t && "string" != typeof e)
+               for (var o in e)
+                    r.d(a, o, function (t) {
+                         return e[t]
+                    }.bind(null, o));
           return a
      }, r.n = function (e) {
-          var t = e && e.__esModule ? function () { return e.default } : function () { return e };
+          var t = e && e.__esModule ? function () {
+               return e.default
+          } : function () {
+               return e
+          };
           return r.d(t, "a", t), t
-     }, r.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, r.p = "dist/";
+     }, r.o = function (e, t) {
+          return Object.prototype.hasOwnProperty.call(e, t)
+     }, r.p = "dist/";
      var l = window.webpackJsonp = window.webpackJsonp || [], c = l.push.bind(l);
      l.push = t, l = l.slice();
      for (var i = 0;
@@ -41,7 +67,10 @@
      var f = c;
      s.push([103, 1]), a()
 }({
-     100: function (e, t) { }, 101: function (e, t, a) { }, 102: function (e, t, a) { }, 103: function (e, t, a) {
+     100: function (e, t) { },
+     101: function (e, t, a) { },
+     102: function (e, t, a) { },
+     103: function (e, t, a) {
           "use strict";
           a.r(t);
           var o = a(6), n = a(0), s = a.n(n), r = a(3), l = a(26), c = a.n(l), i = a(27), f = a.n(i);
@@ -50,14 +79,33 @@
                let n;
                if ((n = e.match(/\/\/.*/)) && (e = e.substr(0, n.index).trim()), n = e.match(/^([A-Z]+):(.+)/i)) {
                     const e = n[1].toUpperCase(), o = n[2];
-                    if (t.includes(e)) return { type: "header", scope: "global", name: e, value: o.trim() };
-                    if (a.includes(e)) return { type: "header", scope: "course", name: e, value: o.trim() }
+                    if (t.includes(e)) return {
+                         type: "header", scope: "global", name: e, value: o.trim()
+                    };
+                    if (a.includes(e)) return {
+                         type: "header", scope: "course", name: e, value: o.trim()
+                    }
                } else if (n = e.match(/^#([A-Z]+)(?:\s+(.+))?/i)) {
                     const e = n[1].toUpperCase(), t = n[2] || "";
-                    if (o.includes(e)) return { type: "command", name: e, value: t.trim() }
-               } else if (n = e.match(/^(([0-9]|A|B|C|F|G)*,?)$/)) { return { type: "data", data: n[1] } } return { type: "unknown", value: e }
+                    if (o.includes(e)) return {
+                         type: "command", name: e, value: t.trim()
+                    }
+               } else if (n = e.match(/^(([0-9]|A|B|C|F|G)*,?)$/)) {
+                    return {
+                         type: "data", data: n[1]
+                    }
+               } return {
+                    type: "unknown", value: e
+               }
           } function p(e, t) {
-               const a = { course: "Oni", level: 0, balloon: [], scoreInit: 100, scoreDiff: 100, ttRowBeat: 16 }, o = [];
+               const a = {
+                    course: "Oni",
+                    level: 0,
+                    balloon: [],
+                    scoreInit: 100,
+                    scoreDiff: 100,
+                    ttRowBeat: 16
+               }, o = [];
                let n = 4, s = 4, r = {}, l = "", c = [], i = "N", f = "N", d = !1;
                for (const e of t) if ("header" === e.type) switch (e.name) {
                     case "COURSE": a.course = e.value;
@@ -93,13 +141,21 @@
                                    if (!t) break;
                                    n = parseInt(t[1], 10), s = parseInt(t[2], 10);
                                    break;
-                              case "GOGOSTART": c.push({ name: "gogoStart", position: l.length });
+                              case "GOGOSTART": c.push({
+                                   name: "gogoStart", position: l.length
+                              });
                                    break;
-                              case "GOGOEND": c.push({ name: "gogoEnd", position: l.length });
+                              case "GOGOEND": c.push({
+                                   name: "gogoEnd", position: l.length
+                              });
                                    break;
-                              case "SCROLL": c.push({ name: "scroll", position: l.length, value: parseFloat(e.value) });
+                              case "SCROLL": c.push({
+                                   name: "scroll", position: l.length, value: parseFloat(e.value)
+                              });
                                    break;
-                              case "BPMCHANGE": c.push({ name: "bpm", position: l.length, value: parseFloat(e.value) });
+                              case "BPMCHANGE": c.push({
+                                   name: "bpm", position: l.length, value: parseFloat(e.value)
+                              });
                                    break;
                               case "TTBREAK": r.ttBreak = !0;
                                    break;
@@ -109,7 +165,9 @@
                     let t = e.data;
                     if (t.endsWith(",")) {
                          l += t.slice(0, -1);
-                         const e = { length: [n, s], properties: r, data: l, events: c };
+                         const e = {
+                              length: [n, s], properties: r, data: l, events: c
+                         };
                          o.push(e), l = "", c = [], r = {}
                     } else l += t
                } if (o.length) {
@@ -122,7 +180,9 @@
                               t = !0;
                               break
                          }
-                    } t || o[0].events.unshift({ name: "bpm", position: 0, value: e.bpm })
+                    } t || o[0].events.unshift({
+                         name: "bpm", position: 0, value: e.bpm
+                    })
                } let p = 0;
                switch (a.course.toLowerCase()) {
                     case "easy": case "0": p = 0;
@@ -134,25 +194,50 @@
                     case "oni": case "3": p = 3;
                          break;
                     case "edit": case "ura": case "4": p = 4
-               }if (l) o.push({ length: [n, s], properties: r, data: l, events: c });
-               else for (let e of c) e.position = o[o.length - 1].data.length, o[o.length - 1].events.push(e);
-               return console.log(o[o.length - 1]), { course: p, headers: a, measures: o }
-          } function u(e, t, a, o, n, s, r) { e.beginPath(), e.moveTo(t, a), e.lineTo(o, n), e.lineWidth = s, e.strokeStyle = r, e.stroke(), e.closePath() } function h(e, t, a, o, n) { e.beginPath(), e.arc(t, a, o, 0, 2 * Math.PI, !1), e.fillStyle = n, e.fill(), e.closePath() } function g(e, t, a, o, n, s) { e.fillStyle = s, e.fillRect(t, a, o, n) } function b(e, t, a, o, n, s) {
+               }
+               if (l)
+                    o.push({
+                         length: [n, s], properties: r, data: l, events: c
+                    });
+               else for (let e of c)
+                    e.position = o[o.length - 1].data.length, o[o.length - 1].events.push(e);
+               return console.log(o[o.length - 1]), {
+                    course: p, headers: a, measures: o
+               }
+          } function u(e, t, a, o, n, s, r) {
+               e.beginPath(), e.moveTo(t, a), e.lineTo(o, n), e.lineWidth = s, e.strokeStyle = r, e.stroke(), e.closePath()
+          } function h(e, t, a, o, n) {
+               e.beginPath(), e.arc(t, a, o, 0, 2 * Math.PI, !1), e.fillStyle = n, e.fill(), e.closePath()
+          } function g(e, t, a, o, n, s) {
+               e.fillStyle = s, e.fillRect(t, a, o, n)
+          } function b(e, t, a, o, n, s) {
                let r = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "middle", l = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : "center";
                e.font = n, e.textBaseline = r, e.textAlign = l, e.fillStyle = s, e.fillText(o, t, a)
           } function m(e, t, a, o, n) {
                let s = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : "middle", r = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "center";
                b(e, t, a, o, '5px "Pixel 3x5"', n, s, r)
           } const v = e => 64 + 66 * e, y = e => 24 + 48 * e;
-          function k(e, t) { return { x: y(t), y: v(e) + 34 } } function E(e, t, a, o) {
+          function k(e, t) {
+               return {
+                    x: y(t), y: v(e) + 34
+               }
+          } function E(e, t, a, o) {
                let n = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-               const { x: s, y: r } = k(t, a);
+               const {
+                    x: s, y: r
+               } = k(t, a);
                h(e, s, r, 9, "#000"), n ? (h(e, s, r, 8, "#fff"), h(e, s, r, 7, o)) : h(e, s, r, 8, o)
           } function x(e, t, a, o) {
-               const { x: n, y: s } = k(t, a);
+               const {
+                    x: n, y: s
+               } = k(t, a);
                h(e, n, s, 12, "#000"), h(e, n, s, 11, "#fff"), h(e, n, s, 9, o)
           } function B(e, t, a, o, n, s, r) {
-               let l = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : "body", { x: c, y: i } = k(a, o), { x: f, y: d } = k(n, s);
+               let l = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : "body", {
+                    x: c, y: i
+               } = k(a, o), {
+                    x: f, y: d
+               } = k(n, s);
                const p = "gogo" === l, u = "bodyBig" === l, h = p ? 34 : 9 + (u ? 3 : 0);
                i -= h, d -= h;
                const b = p ? 18 : 18 + (u ? 6 : 0);
@@ -170,9 +255,17 @@
                     } const f = y(s);
                     p ? g(e, 0, d, f, b, r) : (g(e, 0, d, f, b, "#000"), g(e, 0, d + 1, f, b - 2, "#fff"), g(e, 0, d + 2, f, b - 4, r))
                }
-          } function O(e, t, a, o, n, s) { E(e, a, o, "#fe4"), E(e, n, s, "#fe4"), B(e, t, a, o, n, s, "#fe4", "body") } function S(e, t, a, o, n, s) { x(e, a, o, "#fe4"), x(e, n, s, "#fe4"), B(e, t, a, o, n, s, "#fe4", "bodyBig") } function T(e, t, a, o, n, s, r) {
+          } function O(e, t, a, o, n, s) {
+               E(e, a, o, "#fe4"), E(e, n, s, "#fe4"), B(e, t, a, o, n, s, "#fe4", "body")
+
+          } function S(e, t, a, o, n, s) {
+               x(e, a, o, "#fe4"), x(e, n, s, "#fe4"), B(e, t, a, o, n, s, "#fe4", "bodyBig")
+
+          } function T(e, t, a, o, n, s, r) {
                E(e, n, s, "#fb4"), B(e, t, a, o, n, s, "#fb4", "body"), E(e, a, o, "#fb4", !1);
-               const { x: l, y: c } = k(a, o);
+               const {
+                    x: l, y: c
+               } = k(a, o);
                m(e, l, c + .5, r.toString(), "#000")
           } var A = function (e, t) {
                const a = function (e) {
@@ -186,12 +279,22 @@
                               e < l.events.length;
                               e++) {
                               const a = l.events[e], n = c / (l.data.length || 1) * a.position;
-                              "bpm" === a.name ? t.push({ type: "bpm", value: a.value, beat: o + n }) : "gogoStart" === a.name ? t.push({ type: "gogoStart", beat: o + n }) : "gogoEnd" === a.name && t.push({ type: "gogoEnd", beat: o + n })
+                              "bpm" === a.name ? t.push({
+                                   type: "bpm", value: a.value, beat: o + n
+
+                              }) : "gogoStart" === a.name ? t.push({
+                                   type: "gogoStart", beat: o + n
+
+                              }) : "gogoEnd" === a.name && t.push({
+                                   type: "gogoEnd", beat: o + n
+                              })
                          } for (let t = 0;
                               t < l.data.length;
                               t++) {
                               const r = l.data.charAt(t);
-                              let i = { type: "", beat: o + c / l.data.length * t };
+                              let i = {
+                                   type: "", beat: o + c / l.data.length * t
+                              };
                               switch (r) {
                                    case "1": i.type = "don";
                                         break;
@@ -226,7 +329,11 @@
                               } let f = i - o, d = 60 / a * f;
                               l.push(n + d), o += f, n += d, r++
                          } return l
-                    }(t, a.map(e => e.beat)).forEach((e, t) => { a[t].time = e }), { headers: e.headers, events: t, notes: a }
+                    }(t, a.map(e => e.beat)).forEach((e, t) => {
+                         a[t].time = e
+                    }), {
+                         headers: e.headers, events: t, notes: a
+                    }
                }(e.courses[t]);
                return {
                     statistics: function (e) {
@@ -237,16 +344,21 @@
                               y < e.notes.length;
                               y++) {
                               const k = e.notes[y];
-                              if (p && p.beat <= k.beat) do { "gogoStart" === p.type ? u = 1 : "gogoEnd" === p.type && (u = 0), d += 1, p = e.events[d] } while (p && p.beat <= k.beat);
+                              if (p && p.beat <= k.beat) do {
+                                   "gogoStart" === p.type ? u = 1 : "gogoEnd" === p.type && (u = 0), d += 1, p = e.events[d]
+                              } while (p && p.beat <= k.beat);
                               const E = v.indexOf(k.type);
-                              if (-1 === E) if ("renda" !== k.type && "rendaBig" !== k.type) if ("balloon" !== k.type) {
-                                   if ("end" === k.type) if (l) a.push(k.time - l), l = !1;
-                                   else if (c) {
-                                        const e = k.time - c, t = i / e;
-                                        o.push([e, i]), c = !1, t <= 60 && (g[f] += i - 1, b[f] += 1)
+                              if (-1 === E)
+                                   if ("renda" !== k.type && "rendaBig" !== k.type) if ("balloon" !== k.type) {
+                                        if ("end" === k.type) if (l) a.push(k.time - l), l = !1;
+                                        else if (c) {
+                                             const e = k.time - c, t = i / e;
+                                             o.push([e, i]), c = !1, t <= 60 && (g[f] += i - 1, b[f] += 1)
+                                        }
+                                   } else c = k.time, i = k.count, f = u;
+                                   else {
+                                        l = k.time;
                                    }
-                              } else c = k.time, i = k.count, f = u;
-                              else l = k.time;
                               else {
                                    0 === y && (n = k.time), s = k.time, t[E] += 1, r += 1;
                                    const a = 2 === E || 3 === E, o = r < 10 ? 0 : r < 30 ? 1 : r < 50 ? 2 : r < 100 ? 3 : 4;
@@ -254,10 +366,16 @@
                                    let l = e.headers.scoreInit + e.headers.scoreDiff * (r < 10 ? 0 : r < 30 ? 1 : r < 50 ? 2 : r < 100 ? 4 : 8), c = 10 * Math.floor(l / 10);
                                    u && (c = 10 * Math.floor(1.2 * c / 10)), a && (c *= 2), m += c
                               }
-                         } return { totalCombo: r, notes: t, length: s - n, rendas: a, balloons: o, score: { score: m, notes: h, balloon: g, balloonPop: b } }
+                         } return {
+                              totalCombo: r, notes: t, length: s - n, rendas: a, balloons: o, score: {
+                                   score: m, notes: h, balloon: g, balloonPop: b
+                              }
+                         }
                     }(a), graph: function (e) {
                          const t = [];
-                         let a = { don: 0, kat: 0 }, o = 0;
+                         let a = {
+                              don: 0, kat: 0
+                         }, o = 0;
                          const n = e.notes[e.notes.length - 1].time / 100, s = ["don", "kat", "donBig", "katBig"];
                          for (let r = 0;
                               r < e.notes.length;
@@ -267,26 +385,38 @@
                                    for (;
                                         (t.length + 1) * n <= l.time;) {
                                         const e = a.don + a.kat;
-                                        o < e && (o = e), t.push(a), a = { don: 0, kat: 0 }
+                                        o < e && (o = e), t.push(a), a = {
+                                             don: 0, kat: 0
+                                        }
                                    } "don" === l.type || "donBig" === l.type ? a.don += 1 : "kat" !== l.type && "katBig" !== l.type || (a.kat += 1)
                               }
                          } for (;
-                              t.length < 100;)t.push({ don: 0, kat: 0 });
-                         return { timeframe: n, max: o, data: t }
+                              t.length < 100;)t.push({
+                                   don: 0, kat: 0
+                              });
+                         return {
+                              timeframe: n, max: o, data: t
+                         }
                     }(a)
                }
           };
           a(101), a(102);
           const w = s()("#charset-utf-8").first(), C = s()("#charset-shift-jis").first(), R = s()("#charset-gb18030").first(), N = s()("#editor-live").first(), L = s()("#auto-scroll-to-bottom").first(), F = s()(".editor-process"), I = s()(".area-editor .input"), M = s()(".area-errors .errors");
           let P = null, D = "", j = "preview";
-          function G(e) { M.text(e) } function H() {
+          function G(e) {
+               M.text(e)
+          } function H() {
                s()(".area-pages .page").addClass("is-hidden"), s()(".area-pages .page-".concat(j)).removeClass("is-hidden"), "preview" === j && "" !== D ? V() : s()("#tja-preview").remove(), "statistics" === j && function () {
                     if ("" === D) return;
                     try {
                          !function (e) {
-                              const { statistics: t, graph: a } = e;
+                              const {
+                                   statistics: t, graph: a
+                              } = e;
                               s()(".stat-total-combo").text(t.totalCombo);
-                              const o = P.courses[D], { scoreInit: n, scoreDiff: l } = o.headers, c = e => 10 * Math.floor(e / 10), i = [0, 1, 2, 4, 8].map(e => c(n + l * e)), f = i.map(e => c(1.2 * e)), d = i.map((e, a) => t.score.notes[0][a] * e).reduce((e, t) => e + t, 0) + f.map((e, a) => t.score.notes[1][a] * e).reduce((e, t) => e + t, 0) + 300 * t.score.balloon[0] + 360 * t.score.balloon[1] + 5e3 * t.score.balloonPop[0] + 6e3 * t.score.balloonPop[1] + 1e4 * Math.floor(t.totalCombo / 100);
+                              const o = P.courses[D], {
+                                   scoreInit: n, scoreDiff: l
+                              } = o.headers, c = e => 10 * Math.floor(e / 10), i = [0, 1, 2, 4, 8].map(e => c(n + l * e)), f = i.map(e => c(1.2 * e)), d = i.map((e, a) => t.score.notes[0][a] * e).reduce((e, t) => e + t, 0) + f.map((e, a) => t.score.notes[1][a] * e).reduce((e, t) => e + t, 0) + 300 * t.score.balloon[0] + 360 * t.score.balloon[1] + 5e3 * t.score.balloonPop[0] + 6e3 * t.score.balloonPop[1] + 1e4 * Math.floor(t.totalCombo / 100);
                               t.rendas.length ? s()(".stat-max-score").text("".concat(d)) : s()(".stat-max-score").text("".concat(d));
                               s()(".stat-don-small").text(t.notes[0]), s()(".stat-don-big").text(t.notes[2]), s()(".stat-kat-small").text(t.notes[1]), s()(".stat-kat-big").text(t.notes[3]);
                               const p = t.notes[0] + t.notes[2], u = t.notes[1] + t.notes[3];
@@ -301,12 +431,16 @@
                               k.append("g").attr("class", "grid").call(x().tickSize(-600).tickFormat(""));
                               k.selectAll(".layer").data(E).enter().append("g").attr("class", "layer").style("fill", (e, t) => ["#f44e", "#44fe"][t]).selectAll("rect").data(e => e).enter().append("rect").attr("x", (e, t) => b(t)).attr("y", e => m(e[1])).attr("height", e => m(e[0]) - m(e[1])).attr("width", b.bandwidth), k.append("g").attr("class", "axis-y").call(x())
                          }(A(P, D))
-                    } catch (e) { console.error(e), G(e.message) }
+                    } catch (e) {
+                         console.error(e), G(e.message)
+                    }
                }()
           } function U() {
                try {
                     P = function (e) {
-                         const t = e.split(/(\r\n|\r|\n)/).map(e => e.trim()), a = { title: "", subtitle: "", bpm: 120, wave: "", offset: 0, demoStart: 0, genre: "" }, o = {};
+                         const t = e.split(/(\r\n|\r|\n)/).map(e => e.trim()), a = {
+                              title: "", subtitle: "", bpm: 120, wave: "", offset: 0, demoStart: 0, genre: ""
+                         }, o = {};
                          let n, s = [];
                          for (n = 0;
                               n < t.length;
@@ -337,11 +471,15 @@
                          } if (s.length) {
                               const e = p(a, s);
                               o[e.course] = e
-                         } return { headers: a, courses: o }
+                         } return {
+                              headers: a, courses: o
+                         }
                     }(I.first().value);
                     for (let e in P.courses);
                     G("No error")
-               } catch (e) { console.error(e), G(e.message) }
+               } catch (e) {
+                    console.error(e), G(e.message)
+               }
           } function V() {
                "" !== D && (s()("#tja-preview").remove(), document.fonts.load('5px "Pixel 3x5"').then(() => {
                     try {
@@ -352,8 +490,12 @@
                                    e < a.measures.length;
                                    e++) {
                                    const t = a.measures[e], l = t.length[0] / t.length[1] * 4;
-                                   (o < r + l || t.properties.ttBreak) && (n.push({ beats: r, measures: s }), s = [], r = 0), s.push(t), r += l
-                              } s.length && n.push({ beats: r, measures: s });
+                                   (o < r + l || t.properties.ttBreak) && (n.push({
+                                        beats: r, measures: s
+                                   }), s = [], r = 0), s.push(t), r += l
+                              } s.length && n.push({
+                                   beats: r, measures: s
+                              });
                               const l = 24 + 48 * o + 24, c = 64 + 66 * n.length + 8, i = document.createElement("canvas");
                               i.width = l, i.height = c, document.body.appendChild(i);
                               const f = i.getContext("2d");
@@ -409,6 +551,7 @@
                                                   e++) {
                                                   const t = r.events[e], n = l / (r.data.length || 1) * t.position, s = y(a + n);
                                                   "scroll" === t.name ? (u(f, s, o, s, o + 50, 2, "#fff"), b(f, s + 2, o + 18 - 13, "HS " + t.value.toString(), "10px sans-serif", "#fff", "bottom", "left")) : "bpm" === t.name && (u(f, s, o, s, o + 50, 2, "#fff"), b(f, s + 2, o + 18 - 7, "BPM " + t.value.toString(), "10px sans-serif", "#fff", "bottom", "left"))
+
                                              } if (u(f, n, o, n, o + 50, 2, "#fff"), m(f, n + 2, o + 18 - 1, s.toString(), "#fff", "bottom", "left"), s += 1, a += l, e + 1 === t.length) {
                                                   const e = y(a);
                                                   u(f, e, o, e, o + 50, 2, "#fff")
@@ -477,17 +620,25 @@
                                              }
                                         }
                                    } return document.body.removeChild(i), i
-                              } catch (e) { throw document.body.removeChild(i), e }
+                              } catch (e) {
+                                   throw document.body.removeChild(i), e
+                              }
                          }(P, D);
                          e.id = "tja-preview", s()(".page-preview").append(e), G("No error")
-                    } catch (e) { console.error(e), G(e.message) }
+                    } catch (e) {
+                         console.error(e), G(e.message)
+                    }
                }))
-          } F.on("click", () => { U(), V() }), I.on("input", () => {
+          } F.on("click", () => {
+               U(), V()
+          }), I.on("input", () => {
                N.checked && (U(), H(), L.checked && setTimeout(() => {
                     let e = document.getElementById("area-pages");
                     e.scrollTo(0, e.scrollHeight)
                }, 100))
-          }), I.on("dragover", e => { e.stopPropagation(), e.preventDefault(), e.dataTransfer.dropEffect = "cppy" }), I.on("drop", e => {
+          }), I.on("dragover", e => {
+               e.stopPropagation(), e.preventDefault(), e.dataTransfer.dropEffect = "cppy"
+          }), I.on("drop", e => {
                e.stopPropagation(), e.preventDefault();
                const t = e.dataTransfer.files[0], a = new FileReader;
                a.onload = e => {

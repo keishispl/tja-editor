@@ -168,40 +168,42 @@ body {
      text-align: center
 }
 
-.page-statistics h3 {
-     margin-top: 1rem;
-     margin-bottom: 1rem;
-     font-size: 1.5rem;
-     font-weight: 700
-}
+.page-statistics, .page-help {
+     h3 {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+          font-weight: 700
+     }
 
-.page-statistics h4 {
-     margin-top: 1rem;
-     font-size: 1.2rem;
-     font-weight: 700
-}
+     h4 {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+          font-weight: 700
+     }
 
-.page-statistics p {
-     font-size: 1rem;
-     line-height: 1.4rem
-}
+     p {
+          font-size: 1rem;
+          line-height: 1.4rem
+     }
 
-.page-statistics code {
-     display: inline-block;
-     padding: 2px 4px;
-     font-size: 1rem;
-     background: #f7f7f7;
-     border: 1px solid #eee;
-     border-radius: 3px
-}
+     code {
+          display: inline-block;
+          padding: 2px 4px;
+          font-size: 1rem;
+          background: rgb(50, 50, 50);
+          border: 1px solid #eee;
+          border-radius: 3px
+     }
 
-.page-statistics .stat-graph {
-     background: #fafafa;
-     border: 1px solid #f6f6f6
-}
+     .stat-graph {
+          background: #fafafa;
+          border: 1px solid #f6f6f6
+     }
 
-.page-statistics .stat-graph .grid line {
-     stroke: #777
+     .stat-graph .grid line {
+          stroke: #777
+     }
 }
 
 @font-face {
