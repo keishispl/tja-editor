@@ -429,7 +429,7 @@
                               b.domain(E[0].map((e, t) => t)), m.domain([0, 5 * Math.ceil(a.max / 5)]);
                               const x = () => r.a(m).ticks(5).tickValues(y);
                               k.append("g").attr("class", "grid").call(x().tickSize(-600).tickFormat(""));
-                              k.selectAll(".layer").data(E).enter().append("g").attr("class", "layer").style("fill", (e, t) => ["#f44e", "#44fe"][t]).selectAll("rect").data(e => e).enter().append("rect").attr("x", (e, t) => b(t)).attr("y", e => m(e[1])).attr("height", e => m(e[0]) - m(e[1])).attr("width", b.bandwidth), k.append("g").attr("class", "axis-y").call(x())
+                              k.selectAll(".layer").data(E).enter().append("g").attr("class", "layer").style("fill", (e, t) => ["#f44e", "#4fe"][t]).selectAll("rect").data(e => e).enter().append("rect").attr("x", (e, t) => b(t)).attr("y", e => m(e[1])).attr("height", e => m(e[0]) - m(e[1])).attr("width", b.bandwidth), k.append("g").attr("class", "axis-y").call(x())
                          }(A(P, D))
                     } catch (e) {
                          console.error(e), G(e.message)

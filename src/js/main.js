@@ -173,7 +173,7 @@ function buildStatisticsPage(data) {
         .data(layers)
         .enter().append('g')
         .attr('class', 'layer')
-        .style('fill', (d, i) => ['#f44e', '#44fe'][i]);
+        .style('fill', (d, i) => ['#f44e', '#4fe'][i]);
 
     layer
         .selectAll('rect')
