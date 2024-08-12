@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
      <meta charset="utf-8">
      <title>TJA Editor</title>
@@ -14,6 +15,7 @@
 
      <link href="dist/css/app.css" rel="stylesheet">
 </head>
+
 <body>
      <style>
           .area-controls {
@@ -74,12 +76,13 @@
                     resize: none;
                }
           }
-          
+
           .area-errors {
                flex: 0.1;
           }
-
-          
+          ::-webkit-scrollbar {
+               width: 0px;
+          }
      </style>
      <section class="pane-left" style="background-color: rgb(50, 50, 50);">
           <div class="area is-titled area-editor">
@@ -128,9 +131,10 @@
                     <span class="button btn-diff-4" data-value="4">Ura</span>
                </div>
                <div class="controls-page" style="float:right">
-                    <span class="button btn-page-preview" data-value="preview">Preview</span> 
-                    <span class="button btn-page-statistics" data-value="statistics">Statistics</span> 
-                    <span class="button btn-page-help" data-value="help">Help</span></div>
+                    <span class="button btn-page-preview" data-value="preview">Preview</span>
+                    <span class="button btn-page-statistics" data-value="statistics">Statistics</span>
+                    <span class="button btn-page-help" data-value="help">Help</span>
+               </div>
           </div>
           <div id="area-pages" class="area area-pages">
                <div class="page page-preview"></div>
@@ -138,19 +142,28 @@
                     <h3>Statistics</h3>
 
                     <h4>Max Combo</h4>
-                    <p><code class="stat-total-combo" style="color: white; background-color: rgb(50, 50, 50);"></code></p>
+                    <p><code class="stat-total-combo" style="color: white; background-color: rgb(50, 50, 50);"></code>
+                    </p>
 
                     <h4>Max Score</h4>
-                    <p><code class="stat-max-score" style="color: white; background-color: rgb(50, 50, 50);"></code> Points + Drumroll</p>
+                    <p><code class="stat-max-score" style="color: white; background-color: rgb(50, 50, 50);"></code>
+                         Points + Drumroll</p>
 
                     <h4>Don Katsu</h4>
-                    <p><span class="is-color-don"><code class="stat-don-small"></code> Don + <code class="stat-don-big"></code> <b>DON</b> </span>/ <span class="is-color-kat"><code class="stat-kat-small"></code> Ka + <code class="stat-kat-big"></code> <b>KA</b> </span> = <code class="is-color-don stat-don"></code> / <code class="is-color-kat stat-kat"></code> (<code class="is-color-don stat-don-ratio"></code> / <code class="is-color-kat stat-kat-ratio"></code>)</p>
+                    <p><span class="is-color-don"><code class="stat-don-small"></code> Don + <code
+                                   class="stat-don-big"></code> <b>DON</b> </span>/ <span class="is-color-kat"><code
+                                   class="stat-kat-small"></code> Ka + <code class="stat-kat-big"></code> <b>KA</b>
+                         </span> = <code class="is-color-don stat-don"></code> / <code
+                              class="is-color-kat stat-kat"></code> (<code class="is-color-don stat-don-ratio"></code> /
+                         <code class="is-color-kat stat-kat-ratio"></code>)
+                    </p>
 
                     <h4>Average Density</h4>
                     <p><code class="stat-density"></code> hit/s (in <code class="stat-length"></code>s)</p>
 
                     <h4>Drumroll</h4>
-                    <p><code class="stat-renda" style="color: yellow;"></code> = <code class="stat-renda-total" style="color: yellow;"></code></p>
+                    <p><code class="stat-renda" style="color: yellow;"></code> = <code class="stat-renda-total"
+                              style="color: yellow;"></code></p>
 
                     <h4>Balloon</h4>
                     <p style="color: orange;"><code class="stat-balloon"></code></p>
@@ -160,7 +173,10 @@
                </div>
                <div class="page page-help" style="color: white;">
                     <h3>Help</h3>
-                    <p>This is just a basic tja formatting guide. For a more in-depth one, please visit <a target="_blank" style="color: aqua;" href="https://github.com/269Seahorse/Better-taiko-web/blob/master/TJA-format.mediawiki">here</a>.</p>
+                    <p>This is just a basic tja formatting guide. For a more in-depth one, please visit <a
+                              target="_blank" style="color: aqua;"
+                              href="https://github.com/269Seahorse/Better-taiko-web/blob/master/TJA-format.mediawiki">here</a>.
+                    </p>
                     <br>
 
                     <h3>Metadata</h3>
@@ -187,7 +203,13 @@
                     <br>
 
                     <h4>Course</h4>
-                    <p><code>COURSE</code> = Name Difficulty</p>
+                    <p><code>COURSE</code> = Name Difficulty:</p>
+                    <li><code style="color: red;">0</code> or <code style="color: red;">Easy</code></li>
+                    <li><code style="color: lime;">1</code> or <code style="color: lime;">Normal</code></li>
+                    <li><code style="color: aqua;">2</code> or <code style="color: aqua;">Hard</code></li>
+                    <li><code style="color: magenta;">3</code> or <code style="color: magenta;">Oni</code></li>
+                    <li><code style="color: purple;">4</code> or <code style="color: purple;">Ura</code> or <code
+                              style="color: purple;">Edit</code></li>
                     <p><code>LEVEL</code> = Difficulty Integer</p>
                     <p><code>BALLOON</code> = Comma Separated Array of Integers for Balloon Notes</p>
                     <p><code>SCOREINIT</code> = Sets INIT Value for the Scoring Method</p>
@@ -206,7 +228,8 @@
                     <p><code>5</code> = Start of <a style="color: yellow;">Drumroll</a></p>
                     <p><code>6</code> = Start of <a style="color: yellow;"><b>Big DRUMROLL</b></a></p>
                     <p><code>7</code> = Start of <a style="color: orange;">Balloon</a></p>
-                    <p><code>8</code> = End of <a style="color: yellow;">Drumroll</a> or <a style="color: orange;">Balloon</a></p>
+                    <p><code>8</code> = End of <a style="color: yellow;">Drumroll</a> or <a
+                              style="color: orange;">Balloon</a></p>
                     <p><code>9</code> = Start of <a style="color: orange;"><b>Big BALLOON</b></a></p>
                     <br>
                     <p><code>A</code> = <span class="is-color-don">Don</span> (With Hands in Multiplayer)</p>
@@ -225,12 +248,153 @@
                     <p><code>#GOGOSTART, #GOGOEND</code> = Start/End of the Go-Go Time Mode</p>
                     <p><code>#BARLINEON, #BARLINEOFF</code> = Show/Hide the Measure Lines</p>
                     <br>
-                    <p><code>#LYRIC (e.g. La la la...)</code> = Show Song Lyrics at the Bottom of the Screen (IGNORED IF LYRICS IS DEFINED)</p>
+                    <p><code>#LYRIC (e.g. La la la...)</code> = Show Song Lyrics at the Bottom of the Screen (IGNORED IF
+                         LYRICS IS DEFINED)</p>
                     <br>
+                    <p style="padding-top: 25px; padding-bottom: 25px;"></p>
+                    <p>Example:</p>
+                    <pre style="border: 1px solid white; overflow-y: scroll; height: 300px; width: 95%;">
+TITLE:アイドル
+SUBTITLE:-- 「【推しの子】」YOASOBI より
+BPM:166
+WAVE:アイドル ／ YOASOBI.ogg
+OFFSET:-0.394
+SONGVOL:100
+SEVOL:100
+DEMOSTART:54.96
+SCOREMODE:2
+GENRE:アニメ
+
+COURSE:4
+LEVEL:9
+SCOREINIT:410
+SCOREDIFF:100
+BALLOON:2,2
+NOTESDESIGNER4:2TEA1
+
+#START
+300000000000202020202020200000100000200000200200,
+2020302022112020,
+300000000000202020202020200000100000000000200000,
+20302320,
+300000100000202020202020200000100000000000200000,
+21322320,
+300000000000202020202020100000100000200000200000,
+22322320,
+30203023,
+030230
+#SCROLL 2
+40,
+
+#SCROLL 1
+#GOGOSTART
+3001001020102010,
+1001001020102010,
+
+#GOGOEND
+3010202212102011,
+1022121010201020,
+1010222212111022,
+1011222010201022,
+1010222212102022,
+1011222010201020,
+1010112222111020,
+1011222020201010,
+
+3021002011102020,
+1021002011102020,
+1020100110201000,
+3040304030222010,
+3021002012102020,
+1021002012112020,
+1020100110201020,
+1020102220101000,
+
+30011121,
+01011020,
+10211022,
+1020102011112000,
+3000402010112120,
+1011202010221110,
+1000400010012020,
+1010202010112120,
+3021203030221210,
+23233000,
+
+#GOGOSTART
+3022102010021020,
+1122112210201010,
+1122102012021020,
+1111201120111022,
+1000102010021020,
+1111222210201020,
+1110202010211020,
+1010202010221022,
+
+1000102010210210,
+21121122,
+1000100010212010,
+1022102210102020,
+1000102010212010,
+1022102210102020,
+1020102010211030,
+000000100000200000200200100000200000500008000000,
+
+#GOGOEND
+300000100000222200222200,
+100100200100222200400100,
+300000111111200100222100,
+200000100000200000100000220000100000400000000000,
+300100222222200100200100,
+200100200100222200400100,
+300000000000101010101010200000100000202020100100,
+200000101010200000100000500008000000600008000000,
+
+300000111111200000202020,
+200020100020200100202020,
+300000000000101010101010200020002000200000200200,
+200000200200200000002000300000000000300000000000,
+222200101010200000300000,
+200020300020202120200000,
+302222300220,
+300000000200100200200200100100100100200000000000,
+
+#GOGOSTART
+3000102010021020,
+1022122210201010,
+1020122010021020,
+1020101120112011,
+1000102010021020,
+1122101120201020,
+1120102010010030,
+0020102210221111,
+
+1000402010012020,
+1022101030403040,
+1000302010021020,
+1022102210203040,
+1000400010012020,
+1022102210203040,
+1000400010010030,
+000000200200100000200000
+#BPMCHANGE 159.7
+100000000000
+#BPMCHANGE 158
+100000000000,
+#BPMCHANGE 150
+#GOGOEND
+3,
+0,
+#END</pre>
+                    <br>
+                    <div style="overflow-y: scroll; max-height: 600px; border: 1px solid white; width: 95%;">
+                         <img src="image.png" style="width: 100%;" draggable="false">
+                    </div>
                </div>
           </div>
      </section>
      <script type="text/javascript" src="dist/js/vendors~app.js?hash=9de5e8"></script>
      <script type="text/javascript" src="dist/js/app.js?hash=f932db"></script>
 </body>
+
 </html>

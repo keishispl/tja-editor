@@ -315,7 +315,7 @@ function getCourse(tjaHeaders, lines) {
             course = 3;
             break;
 
-        case 'edit': case 'ura': case '4':
+        case 'ura': case 'edit': case '4':
             course = 4;
             break;
     }
